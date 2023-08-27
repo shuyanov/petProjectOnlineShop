@@ -8,9 +8,10 @@ const Header = ({ children }: PropsWithChildren<object>) => {
       flexDirection="row"
       justifyContent="center"
       alignItems="center"
-      height={100}
+      height={75}
       top={0}
-      zIndex={10}
+      zIndex={0}
+      width={'100%'}
     >
       {children}
     </FlexContainer>

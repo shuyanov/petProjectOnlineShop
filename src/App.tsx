@@ -1,29 +1,15 @@
 import './styles.css'
-
-import Image from './game.png'
-import LOGO from './logo.svg'
-import { ClickCounter } from './ClickCounter'
+import { Layout } from './common/LayOut/iendx'
+import { Header } from './organism/Header/Header'
+import { FlexContainer } from './common/FlexContainer/FlexContainer'
+import style from './App.module.scss'
 
 export const App = () => {
   return (
-    <div
-      style={{
-        width: '100hw',
-        display: 'flex',
-        alignItems: 'center',
-        msFlexDirection: 'column',
-      }}
-    >
-      <div>
-        <h1>
-          HER React TS + Webpac - {process.env.NODE_ENV} {process.env.name}
-        </h1>
-        <img src={Image} alt="gameTest" width={300} height={250} />
-        <img src={LOGO} alt="gameTest" width={300} />
-      </div>
-      <div>
-        <ClickCounter />
-      </div>
-    </div>
+    <FlexContainer className={style.MainPage}>
+      <Layout.Header>
+        <Header></Header>
+      </Layout.Header>
+    </FlexContainer>
   )
 }

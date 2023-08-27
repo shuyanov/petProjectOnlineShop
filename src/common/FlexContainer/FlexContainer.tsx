@@ -1,16 +1,13 @@
 import React, { PropsWithChildren } from 'react'
 
-import {
-  ContainerWidthType,
-  ContainerMaxWidth,
-} from '../Types/ContainerWidthTypes'
+import { ContainerWidthType } from '../Types/ContainerWidthTypes'
 
 type FlexContainerProps = {
   flexWrap?: 'wrap' | 'nowrap' | 'wrap-reverse'
   flexDirection?: 'column' | 'row'
   alignItems?: string
   gap?: number
-  width?: number
+  width?: number | '100%'
   height?: number | string
   justifyContent?: string
   position?: 'absolute' | 'relative' | 'fixed' | 'sticky'
@@ -31,10 +28,10 @@ export const FlexContainer: React.FC<PropsWithChildren<FlexContainerProps>> = ({
   children,
   position,
   top,
-  type,
   className,
   bottom,
   zIndex,
+  width,
 }) => {
   return (
     <div
@@ -45,8 +42,8 @@ export const FlexContainer: React.FC<PropsWithChildren<FlexContainerProps>> = ({
         flexWrap: flexWrap || 'nowrap',
         alignItems: alignItems || 'flex-start',
         gap: gap || 0,
-        maxWidth: type ? ContainerMaxWidth[type] : ContainerMaxWidth.fullWidth,
         height: height || '100%',
+        width: width || '100%',
         justifyContent: justifyContent || 'flex-start',
         position: position || 'static',
         top: top || 0,
