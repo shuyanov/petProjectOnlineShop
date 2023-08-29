@@ -4,12 +4,10 @@ import { FlexContainer } from '../FlexContainer/inedx'
 const Header = ({ children }: PropsWithChildren<object>) => {
   return (
     <FlexContainer
-      position="sticky"
       flexDirection="row"
       justifyContent="center"
       alignItems="center"
       height={75}
-      top={0}
       zIndex={0}
       width={'100%'}
     >

@@ -1,0 +1,18 @@
+.prewiePage {
+  max-width: 1440px;
+  max-height: 770px;
+
+  overflow: hidden;
+
+  .test {
+    width: 100vw;
+    min-width: 1000px;
+    height: 100vh;
+
+    object-fit: cover;
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(../../../publick/bg/bg-image.png);
+  }
+}
