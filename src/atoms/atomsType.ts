@@ -7,3 +7,8 @@ export interface ButtonIconProps {
   onClick?: () => void
   src: string
 }
+
+export interface ButtonProps {
+  onClick?: () => void
+  title: string
+}
